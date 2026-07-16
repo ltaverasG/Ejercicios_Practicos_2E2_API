@@ -1,6 +1,8 @@
 # Challenge de Automatizacion QA — demoblaze.com
 
-Hola. En este repositorio les dejo mi solucion al challenge de automatizacion. Lo construi con **TypeScript + Playwright** y cubre los dos ejercicios que me pidieron:
+Hola. En este repositorio les dejo mi solucion al challenge de automatizacion. Lo construi con **TypeScript + Playwright** y cubre los dos ejercicios que me pidieron.
+
+> **Nota sobre herramientas:** use Claude para la documentacion tecnica y subida al repositorios. 
 
 1. **Ejercicio 1 (E2E):** el flujo completo de compra en [https://www.demoblaze.com](https://www.demoblaze.com/)
 2. **Ejercicio 2 (API):** las pruebas de los servicios REST `signup` y `login` de [https://api.demoblaze.com](https://api.demoblaze.com)
