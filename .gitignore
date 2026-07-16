@@ -1,0 +1,14 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+evidence/*.png
+!evidence/.gitkeep
+# La evidencia de API (api-outputs.json) SI se versiona como prueba del resultado
+!evidence/api-outputs.json
+cypress-example/node_modules/
+cypress-example/cypress/videos/
+cypress-example/cypress/screenshots/
+cypress-example/cypress/downloads/
+*.log
+.env

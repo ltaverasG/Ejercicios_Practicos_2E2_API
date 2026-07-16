@@ -1,0 +1,29 @@
+{
+  // Usa la version de TypeScript del proyecto (node_modules) en vez de la que trae VS Code
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Formato al guardar
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  // La extension de Playwright detecta los tests desde este config
+  "playwright.env": {},
+  "playwright.reuseBrowser": false,
+
+  // Oculta ruido en el explorador de archivos
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/test-results": true,
+    "**/playwright-report": true,
+    "**/.git": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/test-results": true,
+    "**/playwright-report": true
+  }
+}

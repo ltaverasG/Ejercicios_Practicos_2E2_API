@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "0. Setup: instalar dependencias + navegadores",
+      "type": "shell",
+      "command": "npm install && npx playwright install",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "1. Correr suite completa (E2E + API)",
+      "type": "shell",
+      "command": "npm test",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "2. Correr E2E con navegador visible",
+      "type": "shell",
+      "command": "npx playwright test tests/e2e --project=e2e-ui --headed",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "3. Correr solo API (4 casos)",
+      "type": "shell",
+      "command": "npm run test:api",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "4. Validar estabilidad E2E (5 corridas, sin retries)",
+      "type": "shell",
+      "command": "npx playwright test tests/e2e --project=e2e-ui --repeat-each=5 --retries=0",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "5. Abrir modo UI de Playwright",
+      "type": "shell",
+      "command": "npm run test:ui",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "6. Ver reporte HTML",
+      "type": "shell",
+      "command": "npm run report",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "7. Correr Cypress (API)",
+      "type": "shell",
+      "command": "npm run cy:run",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "8. Verificar tipos TypeScript",
+      "type": "shell",
+      "command": "npx tsc --noEmit",
+      "group": "build",
+      "problemMatcher": ["$tsc"],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

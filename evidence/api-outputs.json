@@ -1,0 +1,30 @@
+{
+  "01_signup_nuevo_usuario": {
+    "status": 200,
+    "statusText": "OK",
+    "body": "",
+    "capturedAt": "2026-07-15T21:24:08.307Z"
+  },
+  "02_signup_usuario_existente": {
+    "status": 200,
+    "statusText": "OK",
+    "body": {
+      "errorMessage": "This user already exist."
+    },
+    "capturedAt": "2026-07-15T21:24:08.459Z"
+  },
+  "03_login_credenciales_correctas": {
+    "status": 200,
+    "statusText": "OK",
+    "body": "Auth_token: cWFfdXNlcl8xNzg0MTUwNjQ3OTgxMTc4NDc1MA==",
+    "capturedAt": "2026-07-15T21:24:08.630Z"
+  },
+  "04_login_credenciales_incorrectas": {
+    "status": 200,
+    "statusText": "OK",
+    "body": {
+      "errorMessage": "Wrong password."
+    },
+    "capturedAt": "2026-07-15T21:24:08.765Z"
+  }
+}
